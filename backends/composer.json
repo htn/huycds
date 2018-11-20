@@ -1,0 +1,45 @@
+{
+    "name": "huycds/backends",
+    "description": "Laravel 5.x Backends",
+    "keywords": ["backends", "laravel", "huycds"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Copy from Shea Lewis",
+            "email": "trangtye2015@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "illuminate/support": "5.7.x"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0",
+        "phpunit/phpunit": "~7.0",
+        "orchestra/testbench": "^3.6",
+        "spatie/phpunit-snapshot-assertions": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Huycds\\Backends\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Huycds\\Backends\\Tests\\": "tests"
+        }
+    },
+    "suggest": {
+        "wikimedia/composer-merge-plugin": "Allows the ability to create and merge composer.json files for your individual backends for backend-specific dependency management."
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Huycds\\Backends\\BackendsServiceProvider"
+            ],
+            "aliases": {
+                "Backend": "Huycds\\Backends\\Facades\\Backend"
+            }
+        }
+    }
+}
